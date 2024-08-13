@@ -16,8 +16,7 @@ public class Compra {
 
     public Compra() {}
 
-    public Compra(int idCompra, int idFuncionario, double total) {
-        this.idCompra = idCompra;
+    public Compra(int idFuncionario, double total) {
         this.idFuncionario = idFuncionario;
         this.total = total;
     }

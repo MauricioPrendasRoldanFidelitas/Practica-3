@@ -40,7 +40,7 @@ public class ProductoDAO {
 
             while (rs.next()) {
                 Producto producto = new Producto();
-                producto.setIdProducto(rs.getInt("idProducto"));
+                producto.setIdProducto(rs.getInt("id_Producto"));
                 producto.setNombre(rs.getString("nombre"));
                 producto.setDescripcion(rs.getString("descripcion"));
                 producto.setPrecio(rs.getDouble("precio"));

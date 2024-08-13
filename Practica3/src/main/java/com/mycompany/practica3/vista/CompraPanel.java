@@ -25,9 +25,9 @@ public class CompraPanel extends JPanel {
         // Panel de entrada de datos
         JPanel inputPanel = new JPanel(new GridLayout(4, 2));
         
-        inputPanel.add(new JLabel("ID Funcionario:"));
-        idFuncionarioField = new JTextField();
-        inputPanel.add(idFuncionarioField);
+//        inputPanel.add(new JLabel("ID Compra:"));
+//        idCompraField = new JTextField();
+//        inputPanel.add(idCompraField);
         
         inputPanel.add(new JLabel("ID Funcionario:"));
         idFuncionarioField = new JTextField();
@@ -41,10 +41,10 @@ public class CompraPanel extends JPanel {
         addButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                int idCompra = Integer.parseInt(idCompraField.getText());
+//                int idCompra = Integer.parseInt(idCompraField.getText());
                 int idFuncionario = Integer.parseInt(idFuncionarioField.getText());
                 double total = Double.parseDouble(totalField.getText());
-                compraControlador.agregarCompra(idCompra, idFuncionario, total);
+                compraControlador.agregarCompra(idFuncionario, total);
                 actualizarListaCompras();
             }
         });

@@ -14,7 +14,7 @@ import com.mycompany.practica3.modelo.CompraProducto;
 public class CompraProductoDAO {
 
     public void insertarCompraProducto(CompraProducto compraProducto) {
-        String sql = "INSERT INTO Compra_Producto (idCompra, idProducto, cantidad) VALUES (?, ?, ?)";
+        String sql = "INSERT INTO Compra_Producto (id_compra, id_producto, cantidad) VALUES (?, ?, ?)";
 
         try (Connection conn = DatabaseConnection.getConnection();
              PreparedStatement stmt = conn.prepareStatement(sql)) {

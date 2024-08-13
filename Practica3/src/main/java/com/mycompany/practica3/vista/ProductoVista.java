@@ -25,7 +25,8 @@ public class ProductoVista extends JPanel {
         table = new JTable();
         JScrollPane scrollPane = new JScrollPane(table);
         add(scrollPane, BorderLayout.CENTER);
-
+        
+        
         cargarDatosEnTabla();
     }
 
@@ -45,5 +46,7 @@ public class ProductoVista extends JPanel {
         }
 
         table.setModel(model);
+        this.revalidate();
+        this.repaint();
     }
 }

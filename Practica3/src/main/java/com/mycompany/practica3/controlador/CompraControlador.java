@@ -17,8 +17,8 @@ public class CompraControlador {
         this.compraDAO = new CompraDAO();
     }
 
-    public void agregarCompra(int idCompra, int idFuncionario, double total) {
-        Compra compra = new Compra(idCompra, idFuncionario, total);
+    public void agregarCompra(int idFuncionario, double total) {
+        Compra compra = new Compra(idFuncionario, total);
         compraDAO.insertarCompra(compra);
         System.out.println("Compra registrada exitosamente.");
     }

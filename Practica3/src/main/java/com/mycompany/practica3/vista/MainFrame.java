@@ -25,6 +25,8 @@ public class MainFrame extends JFrame {
         tabbedPane.addTab("Compras", new CompraPanel());
         tabbedPane.addTab("CompraProducto", new CompraProductoPanel());
         tabbedPane.addTab("Lista Productos", new ProductoVista());
+        tabbedPane.revalidate();
+        tabbedPane.repaint();
         
         add(tabbedPane);
     }

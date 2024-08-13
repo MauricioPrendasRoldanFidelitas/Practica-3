@@ -14,7 +14,7 @@ import com.mycompany.practica3.modelo.Compra;
 public class CompraDAO {
 
     public void insertarCompra(Compra compra) {
-        String sql = "INSERT INTO Compra (idFuncionario, total) VALUES (?, ?)";
+        String sql = "INSERT INTO Compra (id_Funcionario, total, fecha) VALUES (?, ?, sysdate())";
 
         try (Connection conn = DatabaseConnection.getConnection();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
@@ -39,8 +39,8 @@ public class CompraDAO {
 
             while (rs.next()) {
                 Compra compra = new Compra();
-                compra.setIdCompra(rs.getInt("idCompra"));
-                compra.setIdFuncionario(rs.getInt("idFuncionario"));
+//                compra.setIdCompra(rs.getInt("idCompra"));
+                compra.setIdFuncionario(rs.getInt("id_funcionario"));
                 compra.setTotal(rs.getDouble("total"));
                 compras.add(compra);
             }
