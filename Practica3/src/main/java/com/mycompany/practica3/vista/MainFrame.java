@@ -17,7 +17,6 @@ public class MainFrame extends JFrame {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
 
-        // Aquí agregamos los paneles de las diferentes funcionalidades
         JTabbedPane tabbedPane = new JTabbedPane();
         
         tabbedPane.addTab("Funcionarios", new FuncionarioPanel());
@@ -25,6 +24,7 @@ public class MainFrame extends JFrame {
         tabbedPane.addTab("Compras", new CompraPanel());
         tabbedPane.addTab("CompraProducto", new CompraProductoPanel());
         tabbedPane.addTab("Lista Productos", new ProductoVista());
+        tabbedPane.addTab("Historial de Compras", new HistorialComprasVista());
         tabbedPane.revalidate();
         tabbedPane.repaint();
         
